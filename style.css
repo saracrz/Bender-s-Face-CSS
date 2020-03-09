@@ -116,6 +116,9 @@ body{
   20% {
     transform: translateY(-50px);
   }
+  60% {
+    transform: translateY(-50px);
+  }
   80% {
     transform: translateY(-50px);
   }
@@ -125,8 +128,8 @@ body{
 }
 
 .Bender__eye::before {
-  animation: 5s ease-in-out 1s infinite topEyelid;
+  animation: 4s ease-in-out 1s infinite topEyelid;
 }
 .Bender__eye::after {
-  animation: 5s ease-in-out 1s infinite bottomEyelid;
+  animation: 4s ease-in-out 1s infinite bottomEyelid;
 }
