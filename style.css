@@ -1,0 +1,132 @@
+body{
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.Bender{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: #a6b4c4;
+  background-image: radial-gradient(#a6b4c4, #59798e);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Bender__eyes{
+  width: 400px;
+  height: 150px;
+  border: 3px solid black;
+  border-radius: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Bender__socket{
+  width: 375px;
+  height: 125px;
+  border: 3px solid black;
+  border-radius: 200px;
+  overflow: hidden;
+  background: black;
+  justify-content: center;
+  display: flex;
+}
+.Bender__eye{
+  width: 145px;
+  height: 145px;
+  background: rgb(250, 250, 169);
+  margin: -10px 10px 0px 10px;
+  border-radius: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.Bender__pupil{
+  width: 25px;
+  height: 25px;
+  background: black;
+}
+.Bender__mouth{
+  width: 275px;
+  height: 100px;
+  background: rgb(250, 250, 169);
+  margin-top: 80px;
+  border: 4px solid black;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-around;  
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  
+}
+.Bender__tooth{
+  height: 100px;
+  width: 4px;
+  background: black;
+}
+.Bender__lip{
+  position: absolute;
+  width: 275px;
+  height: 4px;
+  background: black;
+  top: calc(33% - 2px)
+}
+.Bender__lip:last-of-type {
+  top: calc(66% - 2px);
+}
+.Bender__eye::before{
+  content: "";
+  position: absolute;
+  width: 145px;
+  height: 50px;
+  top: -50px;
+  background: black;
+}
+.Bender__eye::after {
+  content: "";
+  position: absolute;
+  width: 145px;
+  height: 50px;
+  bottom: -50px;
+  background: black;
+}
+
+@keyframes topEyelid {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(50px);
+  }
+  80% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes bottomEyelid {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-50px);
+  }
+  80% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.Bender__eye::before {
+  animation: 5s ease-in-out 1s infinite topEyelid;
+}
+.Bender__eye::after {
+  animation: 5s ease-in-out 1s infinite bottomEyelid;
+}
